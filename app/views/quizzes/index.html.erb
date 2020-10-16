@@ -1,5 +1,6 @@
 <h1>クイズ</h1>
 <%= link_to "問題作成", new_quiz_path %>
+
  <table>
     <tr> 
         <th>問題</th> 
@@ -10,6 +11,9 @@
         <tr>
             <td>
                 <%= link_to "坂本龍馬", quiz_path(quiz) %>
+            </td>
+            <td>
+                <%= link_to "編集", edit_quiz_path(quiz) %>
             </td>
        
         </tr>

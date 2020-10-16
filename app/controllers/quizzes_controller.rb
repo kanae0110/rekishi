@@ -35,4 +35,10 @@ class QuizzesController < ApplicationController
             render :edit
         end
     end
+    
+    def destroy
+        @quiz = Quiz.find(params[:id])
+        @quiz.destroy
+        redirect_to quizzes_path
+    end
 end

@@ -1,13 +1,17 @@
 <h1>クイズ</h1>
+<%= link_to "問題作成", new_quiz_path %>
  <table>
     <tr> 
         <th>問題</th> 
         
+        
     </tr>   
     <% @quizzes.each do |quiz| %>
-    <tr>
-        <td><%= quiz.question %></td>
+        <tr>
+            <td>
+                <%= link_to "坂本龍馬", quiz_path(quiz) %>
+            </td>
        
-    </tr>
+        </tr>
     <% end %>
 </table>

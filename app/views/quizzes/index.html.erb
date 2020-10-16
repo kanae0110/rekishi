@@ -2,20 +2,12 @@
  <table>
     <tr> 
         <th>問題</th> 
-        <th>１</th> 
-        <th>２</th> 
-        <th>３</th>
-        <th>答え</th>
-        <th>説明</th>
+        
     </tr>   
     <% @quizzes.each do |quiz| %>
     <tr>
         <td><%= quiz.question %></td>
-        <td><%= quiz.answer1 %></td>
-        <td><%= quiz.answer2 %></td>
-        <td><%= quiz.answer3 %></td>
-        <td><%= quiz.answer %></td>
-        <td><%= quiz.description %></td>
+       
     </tr>
     <% end %>
 </table>

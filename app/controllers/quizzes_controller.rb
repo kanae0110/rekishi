@@ -13,7 +13,7 @@ class QuizzesController < ApplicationController
     end
     
     def create
-        quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :description)
+        quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :discription)
         @quiz = Quiz.new(quiz_params)
         if @quiz.save
             redirect_to quizzes_path
@@ -28,7 +28,7 @@ class QuizzesController < ApplicationController
     
     def update
         @quiz = Quiz.find(params[:id])
-        quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :description)
+        quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :discription)
         if @quiz.update(quiz_params)
             redirect_to quiz_path(@quiz)
         else

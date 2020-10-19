@@ -8,6 +8,11 @@
     </div>
     
     <div class="form-group">
+        <label>ストーリー番号</label>
+        <%= f.number_field :story_id, class: "form-control" %>
+    </div>
+    
+    <div class="form-group">
         <label>選択肢１</label>
         <%= f.text_field :answer1, class: "form-control" %>
     </div>
@@ -27,7 +32,7 @@
     
     <div class="form-group">
         <label>説明</label>
-        <%= f.text_field :description, class: "form-control" %>
+        <%= f.text_field :discription, class: "form-control" %>
     </div>
     <%= f.submit "登録", class: "btn btn-primary"%>
     

@@ -4,5 +4,5 @@ class Quiz < ApplicationRecord
     validates :answer2, presence: true
     validates :answer3, presence: true
     validates :answer, presence: true
-    validates :description, presence: true
+    validates :discription, presence: true
 end

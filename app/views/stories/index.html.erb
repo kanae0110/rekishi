@@ -1,11 +1,19 @@
 <h1>ストーリー</h1>
+<%= link_to "新規", new_story_path, class: "btn btn-success" %>
 <table>
-   <h2>カテゴリ</h2>
-   <ul>
-       <li>人物</li>
-       <li>事件</li>
-       <li>戦</li>
-   </ul>
+ <tr>
+   <th>カテゴリ</th>
+   <th>タイトル</th>
+    
+ </tr>  
+ <% @stories.each do |story| %>
+ <tr>
+     <td><%= story.category %></td>
+    <td><%= story.name %></td>
+    
+ </tr>   
+ 
+ <% end %>
    
     
 </table>

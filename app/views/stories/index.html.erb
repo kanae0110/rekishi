@@ -1,5 +1,6 @@
 <h1>ストーリー</h1>
-<%= link_to "新規", new_story_path, class: "btn btn-success" %>
+<%= link_to "新規", new_story_path %>
+
 <table>
  <tr>
    <th>カテゴリ</th>
@@ -10,7 +11,10 @@
  <tr>
      <td><%= story.category %></td>
     <td><%= story.name %></td>
-    
+    <td>
+     <%= link_to "編集", edit_story_path(story) %>
+     <%= link_to "削除", story_path(story), method: "delete", data: {confirm: '本当に削除しますか？' } %>
+    </td>
  </tr>   
  
  <% end %>

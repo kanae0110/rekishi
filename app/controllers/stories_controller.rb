@@ -1,11 +1,12 @@
 class StoriesController < ApplicationController
+    before_action :set_story, only: [:show, :edit, :update, :destroy]
     
     def index
         @stories = Story.all
     end
     
     def show
-        @stories = Story.find(params[:id])    
+        
     end   
     
     def new
@@ -16,29 +17,38 @@ class StoriesController < ApplicationController
         story_params = params.require(:story).permit(:category, :name)
         @story = Story.new(story_params)
         if @story.save
+            flash[:notice] = "ストーリーに１件登録しました"
             redirect_to stories_path
         else
+            flash.now[:alert] = "登録に失敗しました"
             render :new
         end
     end
     
     def edit
-        @book = Book.find(params[:id])
+       
     end
     
     def update  
-        @story = Story.find(params[:id])
+        
         story_params = params.require(:story).permit(:category, :name)
         if @story.update(story_params)
+            flash[:notice] = "ストーリーを更新しました"
             redirect_to story_params
         else
+            flash.now[:alert] = "更新に失敗しました"
             render :edit
         end
     end
     
-    def destory
-        @story = Story.find(params[:id])
-        @story.destory
+    def destroy
+       
+        @story.destroy
+        flash[:notice] = "削除しました"
         redirect_to stories_path
     end
+    
+    def set_story
+        @story = Story.find(params[:id])
+    end    
 end

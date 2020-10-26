@@ -1,6 +1,6 @@
 <h1>ストーリー変更</h1>
 
-<%= form_with model: @story, local: true, method: "patch" do |f| %>
+<%= form_with model: [:admin, @story], local: true, method: "patch" do |f| %>
 
     <div class="form-group">
         <label>カテゴリ</label>

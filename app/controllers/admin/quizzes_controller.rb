@@ -1,4 +1,4 @@
-class QuizzesController < ApplicationController
+class Admin::QuizzesController < ApplicationController
     
     def index
         @quizzes = Quiz.all
@@ -16,21 +16,22 @@ class QuizzesController < ApplicationController
         quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :discription)
         @quiz = Quiz.new(quiz_params)
         if @quiz.save
-            redirect_to quizzes_path
+            redirect_to admin_quizzes_path
         else
             render :new
         end
     end
     
     def edit
-        @quiz = Quiz.find(params[:id])
+#        @quiz = Quiz.find(params[:id])
+         @quiz = nil
     end
     
     def update
         @quiz = Quiz.find(params[:id])
         quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :discription)
         if @quiz.update(quiz_params)
-            redirect_to quiz_path(@quiz)
+            redirect_to admin_quizzes_path
         else
             render :edit
         end
@@ -39,6 +40,6 @@ class QuizzesController < ApplicationController
     def destroy
         @quiz = Quiz.find(params[:id])
         @quiz.destroy
-        redirect_to quizzes_path
+        redirect_to admin_quizzes_path
     end
 end

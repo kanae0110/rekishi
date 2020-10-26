@@ -1,9 +1,9 @@
 <h1>ストーリー新規登録</h1>
-<%= form_with model: @story, local: true do |f| %>
+<%= form_with model: [:admin, @story], local: true do |f| %>
 
     <div class="form-group">
         <label>カテゴリ</label>
-        <%= f.text_field :category, class: "form-control" %>
+        <%= f.select :category, Story::CATEGORIES, { include_blank: '選択してください'}, {class: "form-control"} %>
     </div>
     
     <div class="form-group">

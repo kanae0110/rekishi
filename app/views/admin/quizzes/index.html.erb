@@ -1,0 +1,23 @@
+<h1>クイズ</h1>
+<%= link_to "問題作成", admin_new_quiz_path %>
+
+ <table>
+    <tr> 
+        <th>問題</th> 
+        
+        
+    </tr>   
+    <% @quizzes.each do |quiz| %>
+        <tr>
+            <td>
+                <%= link_to "クイズ", admin_quiz_path(quiz) %>
+            </td>
+            <td>
+                <%= link_to "編集", admin_edit_quiz_path(quiz) %>
+            </td>
+            <td>
+                <%= link_to "削除", admin_quiz_path(quiz), method: "delete", data: { confirm: '本当に削除しますか?' }, class: "btn btn-danger" %>
+            </td>
+        </tr>
+    <% end %>
+</table>

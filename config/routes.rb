@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
- resources :stories
- resources :quizzes
+ resources :stories, only: [:index, :show]
+ namespace :admin do
+   resources :stories
+   resources :quizzes
+ end
+
 end

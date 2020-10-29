@@ -1,4 +1,8 @@
 class CategoriesController < ApplicationController
+    
+   
+    
+    
   
     
     def index
@@ -9,4 +13,9 @@ class CategoriesController < ApplicationController
         @story = Story.find_by(category: params[:category]) 
     end
     
+    private
+    
+    
+    
+   
 end

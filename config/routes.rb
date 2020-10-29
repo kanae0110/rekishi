@@ -6,6 +6,7 @@ Rails.application.routes.draw do
  post "/signup", to: "users#create"
  get "/login", to: "session#new"
  post "/login", to: "session#create"
+ get "/logout", to: "session#destroy"
  
  namespace :admin do
    resources :stories

@@ -1,7 +1,7 @@
-class StoriesController < CategoriesController
+class StoriesController < ApplicationController
     
   def index
-      @stories = Story.where(category: "事件")
+      @stories = Story.select("name")
   end  
     
     

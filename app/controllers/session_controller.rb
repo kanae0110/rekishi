@@ -1,5 +1,5 @@
 class SessionController < ApplicationController
-  before_action :redirect_to_stories
+  before_action :redirect_to_stories, only: [:new, :create]
     
     def new
     end
@@ -9,7 +9,7 @@ class SessionController < ApplicationController
       if user.present? && user.authenticate(params[:password])
         flash[:notice] = "ログインしました"
         session[:user_id] = user.id
-        redirect_to stories_path
+        redirect_to categories_path
       else
         flash.now[:alert] = "ログインに失敗しました"
         render "new"

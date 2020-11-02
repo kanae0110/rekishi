@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
- get "/stories", to: "categories#index"
- get "/stories/:category", to: "categories#show"
- 
+ resources :categories, only: [:index]
+ resources :stories
  get "/signup", to: "users#new"
  post "/signup", to: "users#create"
  get "/login", to: "session#new"

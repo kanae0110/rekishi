@@ -1,21 +1,13 @@
-class CategoriesController < ApplicationController
-    
-   
+class CategoriesController < UserController
     
     
   
     
     def index
-        @stories = Story.all
+        @categories = Story::CATEGORIES 
     end
     
-    def show
-        @story = Story.find_by(category: params[:category]) 
-    end
-    
-    private
+
     
     
-    
-   
 end

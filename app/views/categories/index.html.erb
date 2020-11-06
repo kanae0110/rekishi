@@ -3,6 +3,6 @@
 
 <% @categories.each do |category| %>
 <ul>
-    <li><%= link_to category, stories_path %></li>
+    <li><%= link_to category, stories_path(category: category) %></li>
 </ul>
 <% end %>

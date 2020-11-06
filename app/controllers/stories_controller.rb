@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
     
   def index
       @stories = Story.all
-       @stories = @stories.where(category: "人物")
+       @stories = @stories.where(category: params[:category])
       
   end  
     

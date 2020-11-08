@@ -1,6 +1,6 @@
 class Quiz < ApplicationRecord
     
-    belong_to :story
+    belongs_to :story
     
     validates :question, presence: true
     validates :answer1, presence: true

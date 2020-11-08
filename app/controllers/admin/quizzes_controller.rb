@@ -23,9 +23,9 @@ class Admin::QuizzesController < ApplicationController
     end
     
     def edit
-#        @quiz = Quiz.find(params[:id])
-         @quiz = nil
-    end
+         @quiz = Quiz.find(params[:id])
+          
+    end   
     
     def update
         @quiz = Quiz.find(params[:id])

@@ -1,10 +1,11 @@
-<h1>ストーリー</h1>
-<%= link_to "新規", new_admin_story_path %>
+<h1>ストーリー一覧</h1>
+<%= link_to "新規", new_admin_story_path, class: "btn btn-success" %>
 
 <table class="table table-striped">
  <tr>
    <th>カテゴリ</th>
    <th>タイトル</th>
+   <th>リンク</th>
     
  </tr>  
  <% @stories.each do |story| %>
@@ -12,8 +13,9 @@
      <td><%= story.category %></td>
     <td><%= story.name %></td>
     <td>
-     <%= link_to "編集", edit_admin_story_path(story) %>
-     <%= link_to "削除", admin_story_path(story), method: "delete", data: {confirm: '本当に削除しますか？' } %>
+     <%= link_to "詳細", admin_story_path(story), class: "btn btn-info" %>
+     <%= link_to "編集", edit_admin_story_path(story), class: "btn btn-warning" %>
+     <%= link_to "削除", admin_story_path(story), method: "delete", data: {confirm: '本当に削除しますか？' }, class: "btn btn-danger" %>
     </td>
  </tr>   
  

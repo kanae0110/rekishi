@@ -1,7 +1,7 @@
 <h1>クイズ新規作成</h1>
 
 <%= form_with model: [:admin, @quiz], local: true do |f| %>
-<%= form.hidden_field 'story[story_id][]', value: story.id %>
+
  
     <div class="form-group">
         <label>問題</label>
@@ -30,6 +30,9 @@
         <label>説明</label>
         <%= f.text_field :discription, class: "form-control" %>
     </div>
+    
+    <%= form.hidden_field :story_id, value: story.id %>
+    
     <%= f.submit "登録", class: "btn btn-primary"%>
     
     

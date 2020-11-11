@@ -22,10 +22,14 @@ class Admin::QuizzesController < ApplicationController
         end
     end
     
+    def quiz_params
+        params.require(:quiz).permit(:story_id)
+    end
+    
     def edit
-         @quiz = Quiz.find(params[:id])
-          
-    end   
+        @quiz = Quiz.find(params[:id])
+
+    end
     
     def update
         @quiz = Quiz.find(params[:id])

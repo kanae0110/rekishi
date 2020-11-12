@@ -8,12 +8,15 @@ class Admin::QuizzesController < ApplicationController
         @quiz = Quiz.find(params[:id])
     end
     
+    
     def new
         @quiz = Quiz.new
+        @story_id = params[:story_id]
+        @story = Story.find_by(params[:story_id])
     end
     
     def create
-        quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :discription)
+        quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :discription, :story_id)
         @quiz = Quiz.new(quiz_params)
         if @quiz.save
             redirect_to admin_quizzes_path
@@ -22,10 +25,8 @@ class Admin::QuizzesController < ApplicationController
         end
     end
     
-    def quiz_params
-        params.require(:quiz).permit(:story_id)
-    end
-    
+   
+        
     def edit
         @quiz = Quiz.find(params[:id])
 

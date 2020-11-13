@@ -3,12 +3,15 @@
 <table class="table table-striped">
   <tr>
     <th>カテゴリ</th>
-    <td><%= @story.category %></td>
+    <th>タイトル</th>
+    <th></th>
   </tr>
   
   <tr>
-    <th>タイトル</th>
+    
+    <td><%= @story.category %></td>
     <td><%= @story.name %></td>
+    <td><%= link_to "クイズを追加する", new_admin_quiz_path %> </td>
   </tr>
   
 </table>

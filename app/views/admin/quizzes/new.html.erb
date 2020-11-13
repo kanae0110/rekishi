@@ -1,11 +1,8 @@
 <h1>クイズ新規作成</h1>
-
+<%= @story.name %>
 <%= form_with model: [:admin, @quiz], local: true do |f| %>
 
-    <div class="form-group">
-        <label>ストーリー名</label></label>
-        <%= f.text_field :story_name, class: "form-control" %>
-    </div> 
+   
  
     <div class="form-group">
         <label>問題</label>

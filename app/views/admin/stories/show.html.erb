@@ -1,1 +1,18 @@
-<
+<h1>ストーリー詳細</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>カテゴリ</th>
+    <th>タイトル</th>
+    <th></th>
+  </tr>
+  
+  <tr>
+    
+    <td><%= @story.category %></td>
+    <td><%= @story.name %></td>
+    <td><%= link_to "クイズを追加する", new_admin_quiz_path(story_id: @story.id) %> </td>
+  </tr>
+  
+</table>
+<%= link_to "戻る", admin_stories_path, class: "btn btn-secondary" %>

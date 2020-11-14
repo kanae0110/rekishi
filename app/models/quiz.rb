@@ -2,6 +2,7 @@ class Quiz < ApplicationRecord
     
     belongs_to :story
     
+    validates :content, presence: true
     validates :question, presence: true
     validates :answer1, presence: true
     validates :answer2, presence: true

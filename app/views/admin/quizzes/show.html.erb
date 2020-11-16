@@ -1,13 +1,15 @@
 <h1>クイズ</h1>
    
-    <td><%= @quiz.content %></td>
+    <p><%= @quiz.content %></p>
     
-    <tr>
+    <p>
        
-        <th>下線部ついて<%= @quiz.question %></th>
-        <td>A<%= @quiz.answer1 %></td>
-        <td>B<%= @quiz.answer2 %></td>
-        <td>C<%= @quiz.answer3 %></td>
+        <ol>
+            下線部ついて<%= @quiz.question %>
+        <li>A<%= @quiz.answer1 %></li>
+        <li>B<%= @quiz.answer2 %></li>
+        <li>C<%= @quiz.answer3 %></li>
+        </ol>
         
-    </tr>
+    </p>
     

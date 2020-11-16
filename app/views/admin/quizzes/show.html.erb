@@ -5,7 +5,7 @@
     <p>
        
         <ol>
-            下線部ついて<%= @quiz.question %>
+            <%= @quiz.question %>
         <li><%= @quiz.answer1 %></li>
         <li><%= @quiz.answer2 %></li>
         <li><%= @quiz.answer3 %></li>
@@ -14,14 +14,14 @@
     </p>
     
     <p>
-      <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-        回答を見る
+      <a class="btn btn-primary" data-toggle="collapse" href="#answer" role="button" aria-expanded="false" aria-controls="answer">
+        解答を見る
       </a>
          
     </p>
-    <div class="collapse" id="collapseExample">
+    <div class="collapse" id="answer">
       <div class="card card-body">
-          <%= @quiz.answer2 %><br>
+          <%= @quiz.answer %><br>
           <%= @quiz.discription %>
       </div>
     </div>

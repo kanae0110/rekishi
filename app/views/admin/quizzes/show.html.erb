@@ -6,10 +6,23 @@
        
         <ol>
             下線部ついて<%= @quiz.question %>
-        <li>A<%= @quiz.answer1 %></li>
-        <li>B<%= @quiz.answer2 %></li>
-        <li>C<%= @quiz.answer3 %></li>
+        <li><%= @quiz.answer1 %></li>
+        <li><%= @quiz.answer2 %></li>
+        <li><%= @quiz.answer3 %></li>
         </ol>
         
     </p>
+    
+    <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        回答を見る
+      </a>
+         
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+          <%= @quiz.answer2 %><br>
+          <%= @quiz.discription %>
+      </div>
+    </div>
     

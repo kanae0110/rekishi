@@ -6,7 +6,9 @@ class Admin::QuizzesController < ApplicationController
     
     def show
         @quiz = Quiz.find(params[:id])
+        
     end
+    
     
     
     def new
@@ -36,7 +38,7 @@ class Admin::QuizzesController < ApplicationController
     def update
         @quiz = Quiz.find(params[:id])
        
-        quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :discription, :story_id, :content)
+        quiz_params = params.require(:quiz).permit(:question, :answer1, :answer2, :answer3, :answer, :discription, :story_id, :content, :next_id)
         if @quiz.update(quiz_params)
             redirect_to admin_quizzes_path
         else

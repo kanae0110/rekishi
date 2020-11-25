@@ -39,7 +39,6 @@
         <label>次の問題</label>
         <%= f.select :next_id, Quiz.all.map {|quiz| [ quiz.question, quiz.id ]}, class: "form-control" %>
      
-
     </div>
     
     

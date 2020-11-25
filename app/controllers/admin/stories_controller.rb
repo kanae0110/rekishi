@@ -31,7 +31,7 @@ class Admin::StoriesController < ApplicationController
     
     def update  
         
-        story_params = params.require(:story).permit(:category, :name)
+        story_params = params.require(:story).permit(:category, :name, :start_id)
         if @story.update(story_params)
             flash[:notice] = "ストーリーを更新しました"
             redirect_to admin_stories_path

@@ -37,7 +37,7 @@
     
     <div class="form-group">
         <label>次の問題</label>
-        <%= f.select :next_id, Quiz.all.map {|quiz| [ quiz.question, quiz.id ]}, class: "form-control" %>
+        <%= f.select :next_id, Quiz.where(story_id: @quiz.story_id).map {|quiz| [ quiz.question, quiz.id ]}, class: "form-control" %>
      
     </div>
     

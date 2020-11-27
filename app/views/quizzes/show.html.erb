@@ -24,4 +24,6 @@
           <%= @quiz.answer %><br>
           <%= @quiz.discription %>
       </div>
+      <%= link_to "次の問題", quiz_path(@quiz.next_id) %>
     </div>
+    <div></div>

@@ -14,7 +14,7 @@
     
     <div class="form-group">
         <label>最初の問題</label>
-        <%= f.select :start_id, Quiz.all.map {|quiz| [ quiz.question, quiz.id ]}, class: "form-control" %>
+        <%= f.select :start_id, @story.quizzes.map {|quiz| [ quiz.question, quiz.id ]}, class: "form-control" %>
     </div>
     
     <%= f.submit "更新", class: "btn btn-primary"%>

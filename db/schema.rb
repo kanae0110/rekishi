@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_13_062356) do
+ActiveRecord::Schema.define(version: 2020_11_23_013149) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2020_11_13_062356) do
     t.text "content"
     t.integer "story_id"
     t.string "Story_name"
+    t.string "correct_answer"
+    t.integer "next_id"
   end
 
   create_table "stories", force: :cascade do |t|
@@ -39,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_11_13_062356) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "start_id"
   end
 
   create_table "sub_categories", force: :cascade do |t|

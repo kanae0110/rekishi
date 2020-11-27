@@ -1,0 +1,15 @@
+<h1>クイズ一覧</h1>
+<table class="table table-striped">
+    <tr> 
+        <th>問題</th> 
+        
+        
+        
+    </tr>   
+    <% @quizzes.each do |quiz| %>
+        <tr>
+            <td>
+                <%= link_to "クイズ", quiz_path(quiz) %>
+            </td>
+    <% end %>
+</table>

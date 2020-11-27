@@ -1,8 +1,8 @@
 <h1>ストーリー一覧</h1>
 
-　<%  @stories.each do |story| %>
+　<% @stories.each do |story| %>
     <ul>
-        <li><%= story.name %></li>
+        <li><%= link_to "#{story.name}", quiz_path(id: story.start_id) %></li>
     </ul>
 
 　<% end %>

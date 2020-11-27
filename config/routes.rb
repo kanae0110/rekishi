@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
  resources :categories, only: [:index]
- resources :stories
- resources :quizzes
+ resources :stories do
+    resources :quizzes
+ end
  get "/signup", to: "users#new"
  post "/signup", to: "users#create"
  get "/login", to: "session#new"

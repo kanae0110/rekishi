@@ -1,0 +1,27 @@
+<h1>クイズ</h1>
+   
+    <p><%= @quiz.content %></p>
+    
+    <p>
+       
+        <ol>
+            <%= @quiz.question %>
+        <li><%= @quiz.answer1 %></li>
+        <li><%= @quiz.answer2 %></li>
+        <li><%= @quiz.answer3 %></li>
+        </ol>
+        
+    </p>
+   
+    
+    <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#answer" role="button" aria-expanded="false" aria-controls="answer">
+        解答を見る
+      </a>
+    </p>
+    <div class="collapse" id="answer">
+      <div class="card card-body">
+          <%= @quiz.answer %><br>
+          <%= @quiz.discription %>
+      </div>
+    </div>

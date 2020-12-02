@@ -9,4 +9,7 @@ class QuizzesController < ApplicationController
        
     end
     
+    def finish
+    end
+    
 end

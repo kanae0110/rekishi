@@ -11,7 +11,7 @@
     <% @quizzes.each do |quiz| %>
         <tr>
             <td>
-                <%= link_to "クイズ", admin_quiz_path(quiz) %>
+                <%= link_to "#{quiz.question}", admin_quiz_path(quiz) %>
             </td>
             <td>
                 <%= link_to "編集", edit_admin_quiz_path(quiz), class: "btn btn-warning" %>

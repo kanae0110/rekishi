@@ -24,6 +24,10 @@
           <%= @quiz.answer %><br>
           <%= @quiz.discription %>
       </div>
-      <%= link_to "次の問題", quiz_path(@quiz.next_id) %>
+      <% if @quiz.next_id.present? %>
+        <%= link_to "次の問題", quiz_path(@quiz.next_id) %>
+      <% else %>
+        <%= link_to "次へ", "/quizzes/finish" %>
+      <% end %>
     </div>
     <div></div>

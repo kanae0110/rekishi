@@ -1,13 +1,10 @@
-class StoriesController < ApplicationController
+class StoriesController < UserController
     
   def index
       @stories = Story.all
-      @stories = @stories.where(category: params[:category])
+      
       
   end  
     
-  def show
-    
-  end
-    
+  
 end

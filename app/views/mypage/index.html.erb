@@ -1,0 +1,19 @@
+<h1>マイページ</h1>
+
+<p><%= @user.name %>さんのクイズ一覧</p>
+<table class="table">
+    <tr>
+        <th>カテゴリー</th>
+        <th>ストーリー</th>
+        <th>最近の問題</th>
+    </tr>
+    <% @user.story_users.each do |su| %>
+        <tr>
+          <td><%= su.story.category %></td>
+          <td><%= su.story.name %></td>
+          <td><%= link_to su.quiz.question, quiz_path(su.quiz.id) %></td>
+        </tr> 
+    <% end %>
+</table>
+    
+<p><%= link_to"ストーリー一覧", "/stories" %></p>

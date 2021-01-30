@@ -11,6 +11,7 @@ Rails.application.routes.draw do
  post "/login", to: "session#create"
  get "/logout", to: "session#destroy"
  get "/mypage", to: "mypage#index"
+ get "/home", to: "home#index"
  
  
  namespace :admin do

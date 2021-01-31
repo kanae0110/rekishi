@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rekishi</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    
+    <header></header>
+    <div class="top-wrapper">
+        <div class="container">
+          <h1>☆RE・KI・SHI☆</h1>
+        
+          <h2>REKISHIではクイズを解きながら歴史を学べるサービスです。</h2>
+            <ul>
+              <li>好きなカテゴリーを選択</li>
+              <li>カテゴリー内のストーリーを選ぶとクイズがスタート</li>
+            </ul>
+          
+        </div>
+    </div>
+    <div class="story-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>カテゴリー</h2>
+        </div>
+        <div class="categories">
+          <div class="category">
+            <p class="name">人物</p>
+            <p>選択した人物になってクイズを解いてみよう</p>
+          </div>
+          <div class="category">
+            <p class="name">事件</p>
+            <p>選択した事件についてなぜ起きたのか流れを知る</p>
+          </div>
+          <div class="category">
+            <p class="name">戦</p>
+            <p>人間の歴史は戦いの歴史である</p>
+          </div>
+          <div class="category">
+            <p class="name">寺社・仏閣</p>
+            <p>寺社・仏閣に詳しくなって実際にお参りしてみよう</p>
+          </div>
+          <div class="category">
+            <p class="name">旅行</p>
+            <p>君の街にもある埋もれた史跡</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <p><%= link_to "会員登録", signup_path, class:"btn btn-success" %></p>or<p><%= link_to "ログイン", login_path, class:"btn btn-primary" %></p>
+
+    <footer></footer>
+  </body>
+</html>

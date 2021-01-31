@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+ 
+.top-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+ 
+.container h1 {
+    letter-spacing: 10px;
+    text-align: center;
+} 
+
+.container h2 {
+    color: blue;
+    
+}
+
+.container li {
+    line-height: 36px;
+}
+
+.story-wrapper {
+    height: 200px;
+    background-color: #f7f7f7;
+}
+
+.heading {
+    text-align: center;
+    
+}
+
+.category {
+  float: left;
+  width: 20%;
+}
+
+.name {
+    color: blue;
+    text-align: center;
+}
+
+.category p {
+    font-size: 14px;
+    text-align: center;
+}

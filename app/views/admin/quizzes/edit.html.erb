@@ -37,7 +37,8 @@
     
     <div class="form-group">
         <label>次の問題</label>
-        <%= f.select :next_id, Quiz.where(story_id: @quiz.story_id).map {|quiz| [ quiz.question, quiz.id ]}, class: "form-control" %>
+        <% next_quizzes=[["最後の問題にする", nil]]+Quiz.where(story_id: @quiz.story_id).map {|quiz| [ quiz.question, quiz.id ]} %>
+        <%= f.select :next_id, next_quizzes, class: "form-control" %>
      
     </div>
     

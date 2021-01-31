@@ -24,6 +24,6 @@ class SessionController < ApplicationController
     private
     
     def redirect_to_stories
-      redirect_to stories_path if session[:user_id].present?
+      redirect_to mypage_path if session[:user_id].present?
     end
 end

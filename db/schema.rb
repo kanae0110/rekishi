@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2021_01_07_012244) do
     t.text "discription"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "content"
     t.integer "story_id"
+    t.text "content"
     t.string "Story_name"
     t.string "correct_answer"
     t.integer "next_id"
